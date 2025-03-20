@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#004051"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/img_1"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QUADRATIC SOLVER"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/baloo_da"
+            android:text="COEFICIENT"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/CoeA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="sans-serif"
+            android:hint="Enter Coefficient A"
+            android:inputType="numberDecimal"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/CoeB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="sans-serif"
+            android:hint="Enter Coefficient B"
+            android:inputType="numberDecimal"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/CoeC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="sans-serif"
+            android:hint="Enter Coefficient C"
+            android:inputType="numberDecimal"
+            android:padding="12dp" />
+
+        <!-- LinearLayout chứa cả hai button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Button Clear -->
+
+            <!-- Button Tính Toán -->
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#9E0505"
+                android:padding="12dp"
+                android:text="Clear"
+                android:textColor="#FAFAFA"
+                android:textSize="20sp"
+                app:icon="@drawable/clear"
+                app:iconPadding="0dp"
+                app:iconTint="#FFFFFF"
+                app:iconTintMode="src_in" />
+
+            <Button
+                android:id="@+id/buttonSolve"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#004051"
+                android:padding="12dp"
+                android:text="Solve"
+                android:textColor="#FAFAFA"
+                android:textSize="20sp"
+                app:icon="@drawable/img"
+                app:iconTintMode="src_atop" />
+
+        </LinearLayout>
+
+        <!-- TextView hiển thị thông báo lỗi -->
+        <TextView
+            android:id="@+id/textViewErrorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
